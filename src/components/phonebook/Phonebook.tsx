@@ -69,6 +69,8 @@ class Phonebook extends Component<{}, PhonebookState> {
     }
     if (this.state.contacts.find(elem => elem.name.includes(name))) {
       alert(`This user: ${name} already exists in your book`);
+      this.setState({ name: "" });
+      this.setState({ number: "" });
       return;
     }
 
@@ -132,11 +134,12 @@ class Phonebook extends Component<{}, PhonebookState> {
           </label>
           <button className={styles.button}>Add contact</button>
         </form>
-        <Contacts
+        {this.state.contacts.length>0 &&  <Contacts
           value={filteredItems}
           onHandleFilter={this.setFilterState}
           handleDelete={this.deleteItems}
-        />
+        />}
+       
       </div>
     );
   }

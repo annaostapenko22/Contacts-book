@@ -1,5 +1,5 @@
 import React, { Component, MouseEvent } from "react";
-// import styles from "./ContactItem.module.css";
+import styles from "./ContactItem.module.css";
 
 interface ContactItemProps {
   handleDelete: (id: string) => void;
@@ -24,7 +24,7 @@ class ContactItem extends Component<ContactItemProps> {
       <>
         <p>{name}:</p>
         <p>{number}</p>
-        <button onClick={this.handleClick}>delete</button>
+        <button onClick={this.handleClick} className={styles.button}>&#10006;</button>
       </>
     );
   }

@@ -1,0 +1,19 @@
+.button {
+    border-radius: 15px;
+    border: solid 2px rgb(214, 154, 85);
+    background-color: rgb(233, 6, 6);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    outline: none;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+

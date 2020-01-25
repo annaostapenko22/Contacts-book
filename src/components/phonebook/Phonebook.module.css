@@ -69,4 +69,9 @@ padding: 20px 0;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 12px;
+  outline: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }

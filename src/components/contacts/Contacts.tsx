@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ContactItem from "./contact-item/ContactItem";
 import SearchPanel from "./search-panel/SearchPanel";
 import User from "../../models/User";
-import styles from "./Contacts.module.css"
+import styles from "./Contacts.module.css";
+
 interface ContactsProps {
   onHandleFilter: (value: string) => void;
   handleDelete: (id: string) => void;
@@ -15,10 +16,10 @@ class Contacts extends Component<ContactsProps> {
       <div>
         <h3 className={styles.title}>Contacts</h3>
         <SearchPanel onHandleFilter={this.props.onHandleFilter} />
-        <ul>
+        <ul className={styles.list}>
           {this.props.value &&
             this.props.value.map(elem => (
-              <li key={elem.id} data-value={elem.id}>
+              <li key={elem.id} data-value={elem.id} className={styles.item}>
                 <ContactItem {...elem} handleDelete={this.props.handleDelete} />
               </li>
             ))}

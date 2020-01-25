@@ -1,5 +1,5 @@
 import React, { Component, ChangeEvent } from "react";
-
+import styles from "./SearchPanel.module.css"
 interface SearchPanelProps {
   onHandleFilter: (value: string) => void;
 }
@@ -15,7 +15,7 @@ class SearchPanel extends Component<SearchPanelProps> {
   render() {
     return (
       <>
-        <h3>Find contacts by name</h3>
+        <h3 className={styles.title}>Find contacts by name</h3>
         <input
           placeholder="Search contact"
           onChange={this.onChangePanel}
